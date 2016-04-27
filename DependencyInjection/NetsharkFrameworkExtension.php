@@ -17,7 +17,7 @@ final class NetsharkFrameworkExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('kingfoo_framework.validator.mapping_dirs', $config['validation']['mappings']);
+        $container->setParameter('netshark_framework.validator.mapping_dirs', $config['validation']['mappings']);
     }
 
     public function getAlias()

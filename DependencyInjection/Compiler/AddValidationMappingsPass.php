@@ -44,6 +44,6 @@ final class AddValidationMappingsPass implements CompilerPassInterface
 
         return array_map(function (\SplFileInfo $file) {
             return $file->getRealPath();
-        }, iterator_to_array($finder));
+        }, iterator_to_array($finder, false));
     }
 }

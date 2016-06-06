@@ -18,6 +18,10 @@ final class NetsharkFrameworkExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $container->setParameter('netshark_framework.validator.mapping_dirs', $config['validation']['mappings']);
+
+        if ($config['param_converter']['form_type']) {
+            $container->getDefinition('netshark_framework.param_converter.form_type')->addTag('request.param_converter');
+        }
     }
 
     public function getAlias()

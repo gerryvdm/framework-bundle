@@ -12,8 +12,5 @@
     	<service id="netshark_framework.monolog.psr_log_message_processor" class="Monolog\Processor\PsrLogMessageProcessor" public="false">
     		<tag name="monolog.processor" />
     	</service>
-        <service id="netshark_framework.param_converter.form_type" class="Netshark\Bundle\FrameworkBundle\ParamConverter\FormTypeParamConverter" public="false">
-            <argument type="service" id="form.factory" />
-        </service>
     </services>
 </container>

@@ -14,12 +14,6 @@ final class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->arrayNode('param_converter')
-                    ->addDefaultsIfNotSet()
-                    ->children()
-                        ->booleanNode('form_type')->defaultTrue()->end()
-                    ->end()
-                ->end()
                 ->arrayNode('validation')
                     ->addDefaultsIfNotSet()
                     ->children()
